@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(233, 228, 241);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;  
+    font-family: "Poppins", serif;
+    font-weight: 600;
+    font-size: 26px;
+}
+
+.calculator {
+    width: 423px;
+    height: 849px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-image: linear-gradient(to right bottom, #fefefe, #fbfbfb, #f8f8f8, #f6f6f6, #f3f3f3);
+    border-radius: 30px;
+}
+
+.calculator__panel {
+    width: 423px;
+    height: 507px;
+    background-image: radial-gradient(circle, #9ee8ff, #89dcff, #7aceff, #74bfff, #79afff);
+    border-radius: 30px;
+    padding: 34px;
+    display: grid;
+    grid-template-areas: 
+        "d d d s"
+        "n n n s"
+        "n n n s"
+        "n n n s"
+        "n n n s";
+    gap: 25px;
+    user-select: none;
+}
+
+.el {
+    border-radius: 200px;
+}
+
+.el:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.calculator__difficult-action {
+    grid-area: d;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 200px;
+}
+
+.calculator__simple-action {
+    grid-area: s;
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    gap: 25px; 
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 200px;
+}
+
+.calculator__action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+}
+
+.equal {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.equal:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.calculator__numbers {
+    grid-area: n;
+    display: grid;
+    grid-template: repeat(4, 1fr) / repeat(3, 1fr);
+    gap: 25px;
+}
+
+.calculator__number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 200px;
+    width: 70px;
+    height: 70px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.calculator__number:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.text {
+    text-align: right;
+    padding: 20px;
+    font-size: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-radius: 30px 30px 0 0;
+    overflow: hidden;
+    white-space: nowrap; 
+}
